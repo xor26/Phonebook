@@ -40,6 +40,11 @@ class DBGateway {
         }
     }
 
+    /**
+     * Get all existing info from DB by contact id and create object of Contact-class
+     * @param id id in contacts-table
+     * @return  object of Contact-class
+     */
     static Contact getContactFromDB(int id) {
         Contact cont = null;
         try {
