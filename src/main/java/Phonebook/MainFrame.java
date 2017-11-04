@@ -114,6 +114,12 @@ public class MainFrame extends JFrame {
         contactsListModel.setElementAt(contact.getFirstName() + " " + contact.getSecondName(), index);
     }
 
+    /**
+     * Set jpanel and all its element enabled/disabled
+     * Method work recursively for each nested panel
+     * @param panel
+     * @param isEnabled
+     */
     void setPanelEnabled(JPanel panel, Boolean isEnabled) {
         panel.setEnabled(isEnabled);
 
@@ -132,6 +138,9 @@ public class MainFrame extends JFrame {
         return contactsList.getSelectedIndex();
     }
 
+    /**
+     * Take info from App.contacts and put in fields in infoPanel
+     */
     void setInfoPanel(){
         setPanelEnabled(phonePanel, true);
         setPanelEnabled(infoPanel, true);
